@@ -11,11 +11,12 @@ import UIKit
 class SongTableViewController: UITableViewController {
     
     var songs = [Song]()
+    var number = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     let urlStr = "https://itunes.apple.com/search?term=adele&media=music"
+     let urlStr = "https://itunes.apple.com/search?term=dido&media=music"
         if let url = URL(string: urlStr){
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 let decoder = JSONDecoder()
@@ -49,8 +50,16 @@ class SongTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "songCell", for: indexPath) as! SongTableViewCell
-
-        // Configure the cell...
+//        if indexPath.row == 1{
+//        number += 1
+//        if number % 2 == 0{
+//            cell.backgroundColor = UIColor.yellow
+//        }else
+//        {cell.backgroundColor = UIColor.red
+//
+//        }
+//        }
+            // Configure the cell...
         let song = songs[indexPath.row]
         cell.nameLabel.text = song.trackName
         cell.photoImage.image = nil

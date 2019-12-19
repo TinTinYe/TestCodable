@@ -28,17 +28,20 @@ class SongDetailViewController: UIViewController {
     }
     
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         URLSession.shared.dataTask(with: song.artworkUrl100) { (data, response , error) in
             if let data = data {
                 DispatchQueue.main.async {
-                    self.phote.image = UIImage(data: data)
+     //               self.phote.image = UIImage(data: data)
+                    self.imageView.image = UIImage(data: data)
                 }
             }
         }.resume()
-        
+
         
         // Do any additional setup after loading the view.
         player = AVPlayer(url: song.previewUrl)

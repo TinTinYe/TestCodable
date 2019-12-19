@@ -62,8 +62,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ook-dv-9Ct">
-                                <rect key="frame" x="87" y="144" width="240" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ook-dv-9Ct">
+                                <rect key="frame" x="20" y="103" width="374" height="237"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -72,12 +72,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="UC7-U2-YA7"/>
                     <connections>
+                        <outlet property="imageView" destination="ook-dv-9Ct" id="NhD-NJ-zhh"/>
                         <outlet property="phote" destination="ook-dv-9Ct" id="mW1-b6-sCQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1263.768115942029" y="164.73214285714286"/>
+            <point key="canvasLocation" x="1262.3188405797102" y="164.73214285714286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mZC-Hd-AKP">
